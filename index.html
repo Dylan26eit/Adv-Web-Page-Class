@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="flipstyles.css" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+
+    <!--Insert Bootstrap CSS here-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Insert Bootstrap Icons CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+        /* Use CSS Variable */
+        :root {
+            --navbar-color: #9cd484;
+            --showcase-color: #000000;
+            --bio-color: #FFC300;
+            --webtech-color: #EC7064;
+            --webtech-gradient: linear-gradient(to bottom, #f7cece, #fc1717);
+            --competence-color: #d0ec8c;
+            --statement-color: #F27a09;
+            --navbar-gradient: linear-gradient(to top, #9cd484, #daf7a6);
+        }
+
+        .background-blur {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url(Images/background-image.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            filter: blur(8px);
+            /* Adjust the blur amount as needed */
+            z-index: -1;
+            /* Ensure this element is behind the text */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Search Area -->
+    <div class="collapse" id="collapseSearchBox">
+        <form class="d-flex">
+            <input class="form-control form-control-lg mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </div>
+
+    <!--Navbar area-->
+    <!--Website: getboostrap.com -> components -> Navbar: https://getbootstrap.com/docs/5.3/components/navbar/ -->
+    <nav class="navbar navbar-expand-lg" style="height: 10vh; background-color: var(--navbar-color);">
+        <div class="container-fluid">
+
+            <!--Tagline-->
+            <div>
+                <i class="bi bi-globe p-2 fs-3"></i>
+                <a class="navbar-brand" href="#">ITWD6.408</a>
+            </div>
+
+
+            <!-- Insert the search icon button FOR SMALL DEVICES  -->
+            <button class="btn d-inline d-lg-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseSearchBox">
+                <span class="bi bi-search fs-3"></span>
+            </button>
+
+            <!--Button: text on it is a sandwich icon-->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!--Collapse navbar-->
+            <!-- Centralize the navbar on big screen -->
+            <div class="collapse navbar-collapse d-lg-flex justify-content-center" id="navbarNavAltMarkup"
+                style="z-index: 3;">
+                <div class="navbar-nav w-50 float-end" style="background-color: var(--navbar-color);">
+                    <a class="nav-link active text-end me-2" aria-current="page" href="index.html">HOME</a>
+                    <a class="nav-link text-end me-2" href="forms.html">FORMS</a>
+                    <a class="nav-link text-end me-2" href="xml.html">XML/RSS</a>
+                    <a class="nav-link text-end me-2" href="javascript.html">JAVASCRIPT</a>
+                    <a class="nav-link text-end me-2" href="research.html">RESEARCH</a>
+                </div>
+            </div>
+
+            <!-- Insert the search icon button FOR BIG DEVICES  -->
+            <button class="btn d-none d-lg-inline" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseSearchBox">
+                <span class="bi bi-search fs-3"></span>
+            </button>
+
+        </div>
+    </nav>
+
+    <!--Main area-->
+    <main style="min-height: 80vh;">
+        <div class="text-white py-5 text-center">
+            <div class="background-blur"></div>
+            <div class="container">
+                <div class="border border-white border-3 p-4 w-100" style="background: rgba(0, 0, 0, 0.5);">
+                    <h2>Advanced Internet and Web Learning Portfolio</h2>
+                    <h1>I am Dylan Anderson</h1>
+                    <p>This is my Website</p>
+                </div>
+            </div>
+        </div>
+        <!-- Make these 2 sections: bio and my web technologies display 
+         vertically on small devices and display horizontally on large devcies -->
+        <div class="container-fluid">
+            <div class="row">
+                <section class="col-12 col-lg-6" style="min-height: 20vh; background-color: var(--bio-color);">
+                    <h3 class="ms-3">BIO</h3>
+                    <div class="row ms-5 pb-3">
+                        <div class="col-12 col-lg-3 d-flex justify-content-center">
+                            <img class="border border-primary rounded-circle align-center" src="Images/portrait.jpg"
+                                width="125">
+                        </div>
+                        <div class="col-12 col-lg-9">
+                            <p>Hi there, my name is Dylan. I enjoy hobbies such as touching grass and I am an avid
+                                Gambler.
+                                <br>It is my hope that in completing this course I will make my own gambling website and
+                                earn heaps of legal dosh.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="col-12 col-lg-6" style="min-height: 20vh; background-image: var(--webtech-gradient);">
+                    <h3>MY WEB TECHNOLOGOES</h3>
+                    <h5>My top 5 web technologies that I use:</h5>
+                    <ul>
+                        <li>Code Editor: I use VS Code</li>
+                        <li>I use the Bootstrap CSS and Javascript Framework</li>
+                        <li>I use the Opera Web Browser</li>
+                        <li>Github is what will host my Website</li>
+                        <li>I am using an Windows 11 Laptop</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+
+        <section style="min-height: 20vh; background-color: var(--competence-color);">
+            <h3 class="ms-3">MY WEB SKILL COMPETENCES</h3>
+            <div class="container-fluid">
+                <div class="row d-flex justify-content-around">
+                    <div class="col-12 col-lg-4 mb-4">
+                        <div class="flip-box">
+                            <div class="flip-box-inner w-100 h-100">
+                                <div class="flip-box-front border border-black d-flex flex-row flex-lg-column align-items-center justify-content-between justify-content-lg-center"
+                                    style="background-color: #b8e4e4;">
+                                    <h2 class="text-center m-4">Mark-Up (HTML5)</h2>
+                                    <img src="Images/html5.png"
+                                        class="border border-primary rounded-circle align-center" width="150">
+                                </div>
+                                <div class="flip-box-back border border-black text-center"
+                                    style="background-color: #b8e4e4;">
+                                    <h2>HTML</h2>
+                                    <p>I am very competent with HTML and have created my own Retail Website before using
+                                        this language.
+                                        <br>Below is a an image showcasing what the website looks like:
+                                    </p>
+                                    <img src="Images/Compitency1.png" class="img-fluid" width="40%">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4 mb-4">
+                        <div class="flip-box">
+                            <div class="flip-box-inner w-100 h-100 text-center">
+                                <div class="flip-box-front border border-black d-flex flex-row flex-lg-column align-items-center justify-content-between justify-content-lg-center"
+                                    style="background-color: #b8e4e4;">
+                                    <h2 class="text-center m-4">Styling (CSS3)</h2>
+                                    <img src="Images/css3.png" class="border border-primary rounded-circle align-center"
+                                        width="150">
+                                </div>
+                                <div class="flip-box-back border border-black" style="background-color: #b8e4e4;">
+                                    <h2>CSS</h2>
+                                    <p>I have done lots of work with CSS with making website responsive on all device
+                                        sizes and with making nice animations
+                                    </p>
+                                    <iframe src="https://giphy.com/embed/H8SiUZI5cS7SLj7rRp" frameBorder="0"
+                                        allowFullScreen class="img-fluid" width="60%"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4 mb-4">
+                        <div class="flip-box">
+                            <div class="flip-box-inner w-100 h-100 text-center">
+                                <div class="flip-box-front border border-black d-flex flex-row flex-lg-column align-items-center justify-content-between justify-content-lg-center"
+                                    style="background-color: #b8e4e4;">
+                                    <h2 class="text-center m-4">Javascript</h2>
+                                    <img src="Images/javascript.png"
+                                        class="border border-primary rounded-circle align-center" width="140">
+                                </div>
+                                <div class="flip-box-back border border-black" style="background-color: #b8e4e4;">
+                                    <h2>Javascript</h2>
+                                    <p>I have added plenty of functionality to past websites and am adept at using
+                                        javascript to do so.
+                                        <br>Below is an example of using me Javascript:
+                                    </p>
+                                    <iframe src="https://giphy.com/embed/bzRSWqQ6JIdiUuraeE" allowFullScreen
+                                        class="img-fluid" width="60%"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section style="min-height: 20vh; background-color: var(--statement-color);">
+            <h3 class="container">STATEMENT OF AUTHENTICITY</h3>
+            <p class="container mb-0 pb-4">I confirm that:
+                <br><br>This is an original assessment and is entirely my own work.
+                <br><br>It contains no material previously published or written by another person or myself except where
+                due acknowledgement
+                is made in the text.
+                <br><br>No material which to a substantial extent, has been submitted for any other academic course, is
+                included without acknowledgement.
+            </p>
+        </section>
+    </main>
+    <!-- Footer area -->
+    <footer style="min-height: 10vh; background-image: var(--navbar-gradient);">
+        <div class="container">
+            <div class="row d-flex justify-content-between align-items-center">
+                <div class="col-12 col-md-auto text-center mb-2 mb-md-0">
+                    <!-- Insert Social media icons -->
+                    <a href="http://www.linkedin.com" style="color: blue;"><span class="bi bi-linkedin fs-1"></span></a>
+                    <a href="http://www.youtube.com" style="color: red;"><span class="bi bi-youtube fs-1"></span></a>
+                    <a href="http://www.x.com" style="color: blue;"><span class="bi bi-twitter fs-1"></span></a>
+                    <a href="http://www.facebook.com" style="color: blue;"><span class="bi bi-facebook fs-1"></span></a>
+                    <a href="http://www.instagram.com" style="color: rgb(220, 64, 90);"><span
+                            class="bi bi-instagram fs-1"></span></a>
+                </div>
+                <div class="col-12 col-md d-flex justify-content-between align-items-center mb-2 mb-md-0">
+                    <span class="text-center mx-auto">
+                        <span class="bi bi-copyright"></span>@2024 DYLAN ANDERSON
+                    </span>
+                    <a href="privacy.html" class="ms-auto" style="text-decoration: none;">PRIVACY POLICY</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!--Insert Bootstrap Javascript and JQuery-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms Page</title>
+
+    <!--Insert Bootstrap CSS here-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Insert Bootstrap Icons CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!--INSERT JQUERY LIBRARY-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <style>
+        /* Use CSS Variable */
+        :root {
+            --navbar-color: #9cd484;
+            --navbar-gradient: linear-gradient(to top, #9cd484, #daf7a6);
+        }
+
+        .active-button {
+            background-color: orange !important;
+            color: white !important;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Search Area -->
+    <div class="collapse" id="collapseSearchBox">
+        <form class="d-flex">
+            <input class="form-control form-control-lg mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </div>
+
+    <!--Navbar area-->
+    <!--Website: getboostrap.com -> components -> Navbar: https://getbootstrap.com/docs/5.3/components/navbar/ -->
+    <nav class="navbar navbar-expand-lg" style="height: 10vh; background-color: var(--navbar-color);">
+        <div class="container-fluid">
+
+            <!--Tagline-->
+            <div>
+                <i class="bi bi-globe p-2 fs-3"></i>
+                <a class="navbar-brand" href="#">ITWD6.408</a>
+            </div>
+
+
+            <!-- Insert the search icon button FOR SMALL DEVICES  -->
+            <button class="btn d-inline d-lg-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseSearchBox">
+                <span class="bi bi-search fs-3"></span>
+            </button>
+
+            <!--Button: text on it is a sandwich icon-->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!--Collapse navbar-->
+            <!-- Centralize the navbar on big screen -->
+            <div class="collapse navbar-collapse d-lg-flex justify-content-center" id="navbarNavAltMarkup"
+                style="z-index: 3;">
+                <div class="navbar-nav w-50 float-end" style="background-color: var(--navbar-color);">
+                    <a class="nav-link text-end me-2" aria-current="page" href="index.html">HOME</a>
+                    <a class="nav-link active text-end me-2" href="forms.html">FORMS</a>
+                    <a class="nav-link text-end me-2" href="xml.html">XML/RSS</a>
+                    <a class="nav-link text-end me-2" href="javascript.html">JAVASCRIPT</a>
+                    <a class="nav-link text-end me-2" href="research.html">RESEARCH</a>
+                </div>
+            </div>
+
+            <!-- Insert the search icon button FOR BIG DEVICES  -->
+            <button class="btn d-none d-lg-inline" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseSearchBox">
+                <span class="bi bi-search fs-3"></span>
+            </button>
+
+        </div>
+    </nav>
+
+    <main style="min-height: 80vh;">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-md-3">
+                    <div class="row gap-md-1 justify-content-center">
+                        <button class="btn btn-primary col-6 col-md-10 toggle-btn" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#htmlform" aria-expanded="false"
+                            aria-controls="htmlform">
+                            HTML Forms
+                        </button>
+                        <button class="btn btn-primary col-6 col-md-10 toggle-btn" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#googleform" aria-expanded="false"
+                            aria-controls="googleform">
+                            Google Forms
+                        </button>
+                    </div>
+                </div>
+                <div class="col-12 col-md-9" style="background-color: #609cd4; min-height: 80vh;">
+                    <div class="collapse show" id="htmlform" data-bs-parent=".col-md-9">
+                        <div class="card card-body" style="min-height: 70vh; background-color: #f8f4f4;">
+                            <form>
+                                <div class="row mb-3">
+                                    <label for="firstName" class="form-label col-md-3">First Name:*</label>
+                                    <div class="col-md-9"><input type="text" class="form-control" id="firstName"
+                                            placeholder="First Name" required></div>
+                                </div>
+                                <div class="row mb-3">
+                                    <label for="lastName" class="form-label col-md-3">Last Name:*</label>
+                                    <div class="col-md-9"><input type="text" class="form-control" id="lastName"
+                                            placeholder="Last Name" required></div>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label fw-bold">Address*</label>
+                                    <div class="row mb-2">
+                                        <label for="line1" class="form-label col-md-3">Line 1:*</label>
+                                        <div class="col-md-9"><input type="text" class="form-control" id="line1"
+                                                placeholder="Line 1" required></div>
+                                    </div>
+                                    <div class="row mb-2">
+                                        <label for="line2" class="form-label col-md-3">Line 2:*</label>
+                                        <div class="col-md-9"><input type="text" class="form-control" id="line2"
+                                                placeholder="Line 2" required></div>
+                                    </div>
+                                    <div class="row mb-2">
+                                        <label for="townCity" class="form-label col-md-3">Town/City:*</label>
+                                        <div class="col-md-9"><input type="text" class="form-control" id="townCity"
+                                                placeholder="Town or City" required></div>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <label class="form-label col-md-2">Gender:</label>
+                                    <div class="col-md-10">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="gender" id="male"
+                                                value="male">
+                                            <label class="form-check-label" for="male">Male</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="gender" id="female"
+                                                value="female">
+                                            <label class="form-check-label" for="female">Female</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="gender" id="other"
+                                                value="other">
+                                            <label class="form-check-label" for="other">Other</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <label class="form-label col-md-2">Mobile Phone Type:</label>
+                                    <div class="col-md-10">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" name="phoneType"
+                                                id="windows" value="windows">
+                                            <label class="form-check-label" for="windows">Windows</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" name="phoneType" id="apple"
+                                                value="apple">
+                                            <label class="form-check-label" for="apple">Apple</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" name="phoneType"
+                                                id="android" value="android">
+                                            <label class="form-check-label" for="android">Android</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" name="phoneType"
+                                                id="otherPhone" value="otherPhone">
+                                            <label class="form-check-label" for="otherPhone">Other</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <label for="mobileProvider" class="form-label col-md-2">Mobile Provider:</label>
+                                    <div class="col-md-10">
+                                        <select class="form-select" id="mobileProvider">
+                                            <option value="none">None</option>
+                                            <option value="provider1">Spark</option>
+                                            <option value="provider2">Two Degrees</option>
+                                            <option value="provider3">Vodafone</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <label for="phoneStudy" class="form-label col-md-4">Do you use your phone for study?
+                                        Please
+                                        explain:</label>
+                                    <div class="col-md-6">
+                                        <textarea class="form-control" id="phoneStudy" rows="3"></textarea>
+                                    </div>
+
+                                </div>
+                                <div class="mb-3">
+                                    <button type="reset" class="btn btn-secondary">Reset</button>
+                                    <button type="submit" class="btn btn-success">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="collapse" id="googleform" data-bs-parent=".col-md-9">
+                        <div class="card card-body" style="min-height: 80vh;">
+                            <iframe
+                                src="https://docs.google.com/forms/d/e/1FAIpQLSfWLJTlmlyjCNY1gqSBP734Hqi5IRIC8N44tTlNrCgwL_-xUg/viewform?embedded=true"
+                                class="flex-fill border-0" style="min-height: 100%;" frameborder="0" marginheight="0"
+                                marginwidth="0">
+                                Loading…
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <script>
+            $(document).ready(function () {
+                // Function to update button styles based on visibility of associated div
+                function updateButtonStyles() {
+                    $('.toggle-btn').each(function () {
+                        var target = $(this).data('bs-target'); // Get the target of the button
+                        if ($(target).hasClass('show')) {
+                            $(this).removeClass('btn-primary').addClass('btn-warning'); // If target div is shown, turn button orange
+                        } else {
+                            $(this).removeClass('btn-warning').addClass('btn-primary'); // If target div is hidden, turn button back to blue
+                        }
+                    });
+                }
+
+                // Update button styles on page load
+                updateButtonStyles();
+
+                // Listen for shown and hidden collapse events to update button styles
+                $('.collapse').on('shown.bs.collapse hidden.bs.collapse', function () {
+                    updateButtonStyles(); // Update styles when collapse transition ends
+                });
+
+                // Ensure button styles are updated when a toggle button is clicked
+                $('.toggle-btn').on('click', function () {
+                    setTimeout(updateButtonStyles, 350); // Add delay to wait for collapse animation to complete
+                });
+            });
+        </script>
+
+    </main>
+
+    <footer style="min-height: 10vh; background-image: var(--navbar-gradient);">
+        <div class="container">
+            <div class="row d-flex justify-content-between align-items-center">
+                <div class="col-12 col-md-auto text-center mb-2 mb-md-0">
+                    <!-- Insert Social media icons -->
+                    <a href="http://www.linkedin.com" style="color: blue;"><span class="bi bi-linkedin fs-1"></span></a>
+                    <a href="http://www.youtube.com" style="color: red;"><span class="bi bi-youtube fs-1"></span></a>
+                    <a href="http://www.x.com" style="color: blue;"><span class="bi bi-twitter fs-1"></span></a>
+                    <a href="http://www.facebook.com" style="color: blue;"><span class="bi bi-facebook fs-1"></span></a>
+                    <a href="http://www.instagram.com" style="color: rgb(220, 64, 90);"><span
+                            class="bi bi-instagram fs-1"></span></a>
+                </div>
+                <div class="col-12 col-md d-flex justify-content-between align-items-center mb-2 mb-md-0">
+                    <span class="text-center mx-auto">
+                        <span class="bi bi-copyright"></span>@2024 DYLAN ANDERSON
+                    </span>
+                    <a href="privacy.html" class="ms-auto" style="text-decoration: none;">PRIVACY POLICY</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!--Insert Bootstrap Javascript and JQuery-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+:root {
+    --navbar-color: #9cd484;
+    --navbar-gradient: linear-gradient(to top, #9cd484, #daf7a6);
+}
+
+.task-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #f8f9fa;
+}
+
+.task-block:hover {
+    background-color: #e9ecef;
+}
+
+.remove-task {
+    color: red;
+    cursor: pointer;
+}
+
+.remove-task:hover {
+    color: darkred;
+}

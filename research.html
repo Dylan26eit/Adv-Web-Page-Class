@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="flipstyles.css" type="text/css">
+    <title>Research Page</title>
+
+    <!--Insert Bootstrap CSS here-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Insert Bootstrap Icons CSS -->
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+        /* Use CSS Variable */
+        :root {
+            --navbar-color: #9cd484;
+            --navbar-gradient: linear-gradient(to top, #9cd484, #daf7a6);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Search Area -->
+    <div class="collapse" id="collapseSearchBox">
+        <form class="d-flex">
+            <input class="form-control form-control-lg mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </div>
+
+    <!--Navbar area-->
+    <!--Website: getboostrap.com -> components -> Navbar: https://getbootstrap.com/docs/5.3/components/navbar/ -->
+    <nav class="navbar navbar-expand-lg" style="height: 10vh; background-color: var(--navbar-color);">
+        <div class="container-fluid">
+
+            <!--Tagline-->
+            <div>
+                <i class="bi bi-globe p-2 fs-3"></i>
+                <a class="navbar-brand" href="#">ITWD6.408</a>
+            </div>
+
+
+            <!-- Insert the search icon button FOR SMALL DEVICES  -->
+            <button class="btn d-inline d-lg-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseSearchBox">
+                <span class="bi bi-search fs-3"></span>
+            </button>
+
+            <!--Button: text on it is a sandwich icon-->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!--Collapse navbar-->
+            <!-- Centralize the navbar on big screen -->
+            <div class="collapse navbar-collapse d-lg-flex justify-content-center" id="navbarNavAltMarkup"
+                style="z-index: 3;">
+                <div class="navbar-nav w-50 float-end" style="background-color: var(--navbar-color);">
+                    <a class="nav-link text-end me-2" aria-current="page" href="index.html">HOME</a>
+                    <a class="nav-link text-end me-2" href="forms.html">FORMS</a>
+                    <a class="nav-link text-end me-2" href="xml.html">XML/RSS</a>
+                    <a class="nav-link text-end me-2" href="javascript.html">JAVASCRIPT</a>
+                    <a class="nav-link active text-end me-2" href="research.html">RESEARCH</a>
+                </div>
+            </div>
+
+            <!-- Insert the search icon button FOR BIG DEVICES  -->
+            <button class="btn d-none d-lg-inline" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseSearchBox">
+                <span class="bi bi-search fs-3"></span>
+            </button>
+
+        </div>
+    </nav>
+
+    <main style="min-height: 80vh;" class="pt-3">
+        <div class="container-fluid">
+            <div class="row d-flex justify-content-around">
+                <!-- Flip box 1 -->
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="flip-box">
+                        <div class="flip-box-inner w-100 h-100">
+                            <div class="flip-box-front border border-black text-center"
+                                style="background-color: #ffe4cc;">
+                                <h4 class="m-4">Copyright, Creative Common (CC) License, Fair Use</h4>
+                                <img src="Images/copyright.jpg" class="border border-primary w-75">
+                            </div>
+                            <div class="flip-box-back border border-black text-center"
+                                style="background-color: #ea9567; overflow-y: auto;">
+                                <h2>Copyright & CC Licenses</h2>
+                                <p><strong>Basic Principles of Copyright:</strong></p>
+                                <p>
+                                    Copyright is a form of intellectual property that gives creators the exclusive right
+                                    to use and distribute their work. It applies automatically upon creation and
+                                    protects original works such as literature, art, music, and more.
+                                </p>
+                                <p><strong>Types of Creative Commons (CC) Licenses:</strong></p>
+                                <ul>
+                                    <li><strong>Attribution (CC BY):</strong> Allows others to distribute, remix, and
+                                        build upon the work, even commercially, as long as credit is given to the
+                                        creator.</li>
+                                    <li><strong>Attribution-ShareAlike (CC BY-SA):</strong> Similar to CC BY, but new
+                                        creations must carry the same license as the original.</li>
+                                    <li><strong>Attribution-NoDerivs (CC BY-ND):</strong> Allows for redistribution,
+                                        commercial and non-commercial, as long as the work is unchanged and credit is
+                                        given.</li>
+                                    <li><strong>Attribution-NonCommercial (CC BY-NC):</strong> Allows others to remix,
+                                        tweak, and build upon the work non-commercially, and although their new works
+                                        must also acknowledge the creator, they don’t have to license their derivative
+                                        works on the same terms.</li>
+                                </ul>
+                                <p><strong>Fair Use in New Zealand Law:</strong></p>
+                                <p>
+                                    New Zealand's law provides limited allowances for "fair use" under copyright, mainly
+                                    for purposes such as criticism, review, news reporting, and education. However, it
+                                    is more restrictive compared to some other jurisdictions like the USA.
+                                </p>
+                                <!-- Sources -->
+                                <div style="font-size: 0.8em; margin-top: 10px;">
+                                    <p><strong>Sources:</strong></p>
+                                    <ul>
+                                        <li><a href="https://www.iponz.govt.nz/about-ip/copyright/"
+                                                target="_blank">IPONZ: Copyright</a></li>
+                                        <li><a href="https://creativecommons.org/licenses/" target="_blank">Creative
+                                                Commons Licenses</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Flip box 2 -->
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="flip-box">
+                        <div class="flip-box-inner w-100 h-100">
+                            <div class="flip-box-front border border-black text-center"
+                                style="background-color: #ffe4cc;">
+                                <h4 class="m-3">Privacy & Web Privacy Policy</h4>
+                                <img src="Images/privacy.jpg" class="border border-primary w-75">
+                            </div>
+                            <div class="flip-box-back border border-black text-center"
+                                style="background-color: #ea9567; overflow-y: auto;">
+                                <h2>Privacy & Privacy Policy</h2>
+                                <p><strong>What is a Privacy Policy?</strong></p>
+                                <p>
+                                    A privacy policy is a legal document that explains how an organization collects,
+                                    uses, stores, and shares the personal data of its users or customers. It outlines
+                                    users' rights regarding their personal information and ensures transparency
+                                    regarding data handling practices.
+                                </p>
+                                <p><strong>New Zealand’s 13 Privacy Principles:</strong></p>
+                                <p>The 13 principles in New Zealand’s Privacy Act 2020 help regulate how personal
+                                    information is handled by organizations. These principles ensure that individuals’
+                                    data is collected, used, and shared appropriately.</p>
+                                <ul class="text-left">
+                                    <li><strong>Principle 1:</strong> Only collect personal information for a lawful
+                                        purpose.</li>
+                                    <li><strong>Principle 2:</strong> Collect personal information directly from the
+                                        individual concerned.</li>
+                                    <li><strong>Principle 3:</strong> Ensure individuals are aware of why their
+                                        information is being collected.</li>
+                                    <li><strong>Principle 4:</strong> Collect personal information by lawful and fair
+                                        means.</li>
+                                    <li><strong>Principle 5:</strong> Ensure personal information is kept securely to
+                                        prevent loss, misuse, or unauthorized access.</li>
+                                    <li><strong>Principle 6:</strong> Give individuals access to their own personal
+                                        information.</li>
+                                    <li><strong>Principle 7:</strong> Allow individuals to correct any incorrect
+                                        personal information.</li>
+                                    <li><strong>Principle 8:</strong> Ensure personal information is accurate and
+                                        up-to-date before using it.</li>
+                                    <li><strong>Principle 9:</strong> Retain personal information only for as long as
+                                        needed for the purposes for which it was collected.</li>
+                                    <li><strong>Principle 10:</strong> Use personal information only for the purposes
+                                        for which it was collected, unless consent is given for another use.</li>
+                                    <li><strong>Principle 11:</strong> Do not disclose personal information unless
+                                        authorized by the individual or by law.</li>
+                                    <li><strong>Principle 12:</strong> Use unique identifiers for individuals only when
+                                        it is necessary for the organization’s functions.</li>
+                                    <li><strong>Principle 13:</strong> Ensure all necessary steps are taken to protect
+                                        the information when transferring it to foreign entities or jurisdictions.</li>
+                                </ul>
+
+                                <!-- Sources -->
+                                <div class="text-left" style="font-size: 0.8em; margin-top: 10px;">
+                                    <p><strong>Source:</strong></p>
+                                    <ul>
+                                        <li><a href="https://www.data.govt.nz/toolkit/privacy-and-security/data-privacy/"
+                                                target="_blank">Data Privacy in New Zealand</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Flip box 3 -->
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="flip-box">
+                        <div class="flip-box-inner w-100 h-100">
+                            <div class="flip-box-front border border-black text-center"
+                                style="background-color: #ffe4cc;">
+                                <h4 class="m-4">How to improve your website SEO?</h4>
+                                <img src="Images/seo.jpg" class="border border-primary w-50">
+                            </div>
+                            <div class="flip-box-back border border-black text-center"
+                                style="background-color: #ea9567; overflow-y: auto;">
+                                <h2>Improving Website SEO</h2>
+                                <p>Search Engine Optimization (SEO) is crucial to increasing the visibility of your
+                                    website on search engines like Google. Here are five effective strategies to boost
+                                    your SEO:</p>
+                                <ul class="text-left">
+                                    <li><strong>1. Optimize Your Content:</strong> Ensure your content is relevant,
+                                        high-quality, and includes targeted keywords. This will help search engines
+                                        understand what your site is about and improve your rankings.</li>
+                                    <li><strong>2. Improve Site Speed:</strong> A faster website enhances user
+                                        experience and helps with SEO. Make sure your website loads quickly on both
+                                        desktop and mobile devices.</li>
+                                    <li><strong>3. Mobile-Friendliness:</strong> With the majority of searches being
+                                        done on mobile devices, optimizing your website for mobile is essential. Make
+                                        sure your site is responsive and user-friendly on all devices.</li>
+                                    <li><strong>4. Use Meta Tags and Descriptions:</strong> Include keyword-rich title
+                                        tags and meta descriptions for each page. This helps search engines understand
+                                        the content of your pages and improves click-through rates.</li>
+                                    <li><strong>5. Build Backlinks:</strong> High-quality backlinks from reputable
+                                        websites can significantly boost your SEO. Focus on earning links from
+                                        trustworthy sources to improve your site’s authority.</li>
+                                </ul>
+
+                                <!-- Sources -->
+                                <div class="text-left" style="font-size: 0.8em; margin-top: 10px;">
+                                    <p><strong>Sources:</strong></p>
+                                    <ul>
+                                        <li><a href="https://moz.com/beginners-guide-to-seo" target="_blank">Moz:
+                                                Beginner's Guide to SEO</a></li>
+                                        <li><a href="https://www.wordstream.com/blog/ws/2021/03/05/seo-strategy"
+                                                target="_blank">WordStream: SEO Strategy</a></li>
+                                        <li><a href="https://www.tutorialspoint.com/seo/"
+                                                target="_blank">TutorialsPoint: SEO</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Flip box 4 -->
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="flip-box">
+                        <div class="flip-box-inner w-100 h-100">
+                            <div class="flip-box-front border border-black text-center"
+                                style="background-color: #ffe4cc;">
+                                <h5 class="m-4">Factors you should know when choosing the right web hosting provider
+                                </h5>
+                                <img src="Images/web-hosting.jpg" class="border border-primary w-50">
+                            </div>
+                            <div class="flip-box-back border border-black text-center"
+                                style="background-color: #ea9567; overflow-y: auto;">
+                                <h2>Choosing the Right Web Hosting Provider</h2>
+                                <p>When selecting a web hosting provider, it's important to take several factors into
+                                    account to ensure that your website will perform well. Here are five major factors
+                                    to consider:</p>
+                                <ul class="text-left">
+                                    <li><strong>1. Reliability and Uptime:</strong> Look for hosting providers with an
+                                        uptime guarantee of at least 99.9%. Downtime can negatively impact user
+                                        experience and SEO rankings.</li>
+                                    <li><strong>2. Speed and Performance:</strong> A hosting provider should offer fast
+                                        servers with the capacity to handle high traffic. Slow performance can drive
+                                        users away.</li>
+                                    <li><strong>3. Security:</strong> Ensure the provider offers robust security
+                                        features such as SSL certificates, DDoS protection, and daily backups. This will
+                                        protect your site from potential cyber threats.</li>
+                                    <li><strong>4. Customer Support:</strong> Choose a provider with responsive and
+                                        knowledgeable customer support available 24/7. Fast and effective support can
+                                        save you time during issues.</li>
+                                    <li><strong>5. Scalability:</strong> As your website grows, you may need more server
+                                        resources. Select a hosting provider that can accommodate the scaling needs of
+                                        your business.</li>
+                                </ul>
+
+                                <!-- Sources -->
+                                <div class="text-left" style="font-size: 0.8em; margin-top: 10px;">
+                                    <p><strong>Sources:</strong></p>
+                                    <ul>
+                                        <li><a href="https://www.knownhost.com/blog/web-hosting-explained-for-beginners/"
+                                                target="_blank">KnownHost: Web Hosting Explained for Beginners</a></li>
+                                        <li><a href="https://www.tutorialspoint.com/internet_technologies/website_publishing.htm"
+                                                target="_blank">TutorialsPoint: Website Publishing</a></li>
+                                        <li><a href="https://www.geeksforgeeks.org/difference-between-web-hosting-and-web-publishing/"
+                                                target="_blank">GeeksforGeeks: Web Hosting vs Web Publishing</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Flip box 5 -->
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="flip-box">
+                        <div class="flip-box-inner w-100 h-100">
+                            <div class="flip-box-front border border-black text-center"
+                                style="background-color: #ffe4cc;">
+                                <h4 class="m-4">Web performance and maintanence</h4>
+                                <img src="Images/web-performance.jpg" class="border border-primary w-75">
+                            </div>
+                            <div class="flip-box-back border border-black text-center"
+                                style="background-color: #ea9567; overflow-y: auto;">
+                                <h2>Web Performance & Maintenance</h2>
+
+                                <!-- Web Performance -->
+                                <h4>5 Ways to Reduce Page Loading Time:</h4>
+                                <ul class="text-left">
+                                    <li><strong>1. Optimize Images:</strong> Use formats like WebP and compress images
+                                        to reduce their size without losing quality.</li>
+                                    <li><strong>2. Minify CSS, JavaScript, and HTML:</strong> Remove unnecessary
+                                        characters and spaces to make your code as lightweight as possible.</li>
+                                    <li><strong>3. Enable Browser Caching:</strong> Configure the browser to store parts
+                                        of your site locally, reducing the need to re-download everything on return
+                                        visits.</li>
+                                    <li><strong>4. Use a Content Delivery Network (CDN):</strong> Distribute your
+                                        content across servers globally, ensuring faster loading times for users
+                                        worldwide.</li>
+                                    <li><strong>5. Reduce HTTP Requests:</strong> Minimize the number of requests by
+                                        combining files, using inline CSS, and reducing external scripts.</li>
+                                </ul>
+
+                                <!-- Website Maintenance -->
+                                <h4>5 Important Website Maintenance Tasks:</h4>
+                                <ul class="text-left">
+                                    <li><strong>1. Backup Your Website Regularly:</strong> Create regular backups to
+                                        ensure you have a recovery option in case of data loss or corruption.</li>
+                                    <li><strong>2. Update Software and Plugins:</strong> Keep your CMS, plugins, and
+                                        themes updated to ensure compatibility and security.</li>
+                                    <li><strong>3. Check for Broken Links:</strong> Regularly scan your website for
+                                        broken links and update or remove them to maintain a good user experience.</li>
+                                    <li><strong>4. Test Website Performance:</strong> Continuously monitor your
+                                        website's speed and responsiveness to ensure it performs well under various
+                                        conditions.</li>
+                                    <li><strong>5. Review Security Measures:</strong> Update passwords, review access
+                                        control settings, and ensure that your security certificates are up to date.
+                                    </li>
+                                </ul>
+
+                                <!-- Sources -->
+                                <div class="text-left" style="font-size: 0.8em; margin-top: 10px;">
+                                    <p><strong>Sources:</strong></p>
+                                    <ul>
+                                        <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Performance/What_is_web_performance"
+                                                target="_blank">MDN: What is Web Performance</a></li>
+                                        <li><a href="https://blog.hubspot.com/website/website-performance"
+                                                target="_blank">HubSpot: Website Performance</a></li>
+                                        <li><a href="https://www.hostgator.com/blog/guide-website-maintenance/"
+                                                target="_blank">HostGator: Website Maintenance Guide</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Flip box 6 -->
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="flip-box">
+                        <div class="flip-box-inner w-100 h-100">
+                            <div class="flip-box-front border border-black text-center"
+                                style="background-color: #ffe4cc;">
+                                <h4 class="m-3">Web Security</h4>
+                                <img src="Images/web-security.jpg" class="border border-primary w-50">
+                            </div>
+                            <div class="flip-box-back border border-black text-center"
+                                style="background-color: #ea9567; overflow-y: auto;">
+                                <h2>Common Cyber Attacks & Preventive Measures</h2>
+
+                                <!-- Cyber Attacks -->
+                                <h4>5 Common Cyber Attacks:</h4>
+                                <ul class="text-left">
+                                    <li><strong>1. Phishing:</strong> A fraudulent attempt to obtain sensitive
+                                        information by disguising as a trustworthy entity via email or other
+                                        communication channels.</li>
+                                    <li><strong>2. Ransomware:</strong> Malicious software that encrypts a victim’s data
+                                        and demands a ransom for its release.</li>
+                                    <li><strong>3. SQL Injection:</strong> An attack that involves inserting malicious
+                                        SQL queries into an input field to gain unauthorized access to a database.</li>
+                                    <li><strong>4. Distributed Denial of Service (DDoS):</strong> An attack that
+                                        overwhelms a network or server with excessive traffic, causing it to become
+                                        unavailable.</li>
+                                    <li><strong>5. Malware:</strong> Malicious software designed to damage, disrupt, or
+                                        gain unauthorized access to systems or data.</li>
+                                </ul>
+
+                                <!-- Preventive Measures -->
+                                <h4>5 Preventive Measures:</h4>
+                                <ul class="text-left">
+                                    <li><strong>1. Educate Users:</strong> Provide training to employees and users about
+                                        recognizing phishing attempts and safe online practices.</li>
+                                    <li><strong>2. Use Antivirus Software:</strong> Install and maintain updated
+                                        antivirus software to detect and remove malware.</li>
+                                    <li><strong>3. Implement Firewalls:</strong> Use firewalls to filter incoming and
+                                        outgoing traffic, protecting against unauthorized access.</li>
+                                    <li><strong>4. Regular Software Updates:</strong> Keep all software, including
+                                        operating systems and applications, updated with the latest security patches.
+                                    </li>
+                                    <li><strong>5. Backup Data:</strong> Regularly back up important data and store
+                                        backups securely to minimize damage in case of ransomware attacks or data loss.
+                                    </li>
+                                </ul>
+
+                                <!-- Sources -->
+                                <div class="text-left" style="font-size: 0.8em; margin-top: 10px;">
+                                    <p><strong>Sources:</strong></p>
+                                    <ul>
+                                        <li><a href="https://www.ibm.com/topics/cyber-attack" target="_blank">IBM: Cyber
+                                                Attacks Overview</a></li>
+                                        <li><a href="https://www.hackmageddon.com/category/security/cyber-attacks-statistics/"
+                                                target="_blank">Hackmageddon: Cyber Attacks Statistics</a></li>
+                                        <li><a href="https://www.simplilearn.com/tutorials/cyber-security-tutorial/types-of-cyber-attacks"
+                                                target="_blank">Simplilearn: Types of Cyber Attacks</a></li>
+                                        <li><a href="https://www.cert.govt.nz/individuals/guides/get-started-cyber-security/"
+                                                target="_blank">CERT NZ: Cyber Security Guide</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer style="min-height: 10vh; background-image: var(--navbar-gradient);">
+        <div class="container">
+            <div class="row d-flex justify-content-between align-items-center">
+                <div class="col-12 col-md-auto text-center mb-2 mb-md-0">
+                    <!-- Insert Social media icons -->
+                    <a href="http://www.linkedin.com" style="color: blue;"><span class="bi bi-linkedin fs-1"></span></a>
+                    <a href="http://www.youtube.com" style="color: red;"><span class="bi bi-youtube fs-1"></span></a>
+                    <a href="http://www.x.com" style="color: blue;"><span class="bi bi-twitter fs-1"></span></a>
+                    <a href="http://www.facebook.com" style="color: blue;"><span class="bi bi-facebook fs-1"></span></a>
+                    <a href="http://www.instagram.com" style="color: rgb(220, 64, 90);"><span
+                            class="bi bi-instagram fs-1"></span></a>
+                </div>
+                <div class="col-12 col-md d-flex justify-content-between align-items-center mb-2 mb-md-0">
+                    <span class="text-center mx-auto">
+                        <span class="bi bi-copyright"></span>@2024 DYLAN ANDERSON
+                    </span>
+                    <a href="privacy.html" class="ms-auto" style="text-decoration: none;">PRIVACY POLICY</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!--Insert Bootstrap Javascript and JQuery-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

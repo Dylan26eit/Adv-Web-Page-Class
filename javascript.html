@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="javascriptStyles.css" type="text/css">
+    <title>Javascript Page</title>
+
+    <!--Insert Bootstrap CSS here-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Insert Bootstrap Icons CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!--INSERT JQUERY LIBRARY-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Search Area -->
+    <div class="collapse" id="collapseSearchBox">
+        <form class="d-flex">
+            <input class="form-control form-control-lg mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </div>
+
+    <!--Navbar area-->
+    <!--Website: getboostrap.com -> components -> Navbar: https://getbootstrap.com/docs/5.3/components/navbar/ -->
+    <nav class="navbar navbar-expand-lg navchangecolour" style="height: 10vh; background-color: var(--navbar-color);">
+        <div class="container-fluid">
+
+            <!--Tagline-->
+            <div>
+                <i class="bi bi-globe p-2 fs-3"></i>
+                <a class="navbar-brand" href="#">ITWD6.408</a>
+            </div>
+
+
+            <!-- Insert the search icon button FOR SMALL DEVICES  -->
+            <button class="btn d-inline d-lg-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseSearchBox">
+                <span class="bi bi-search fs-3"></span>
+            </button>
+
+            <!--Button: text on it is a sandwich icon-->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!--Collapse navbar-->
+            <!-- Centralize the navbar on big screen -->
+            <div class="collapse navbar-collapse d-lg-flex justify-content-center" id="navbarNavAltMarkup"
+                style="z-index: 3;">
+                <div class="navbar-nav w-50 float-end navchangecolour" style="background-color: var(--navbar-color);">
+                    <a class="nav-link text-end me-2" aria-current="page" href="index.html">HOME</a>
+                    <a class="nav-link text-end me-2" href="forms.html">FORMS</a>
+                    <a class="nav-link text-end me-2" href="xml.html">XML/RSS</a>
+                    <a class="nav-link active text-end me-2" href="javascript.html">JAVASCRIPT</a>
+                    <a class="nav-link text-end me-2" href="research.html">RESEARCH</a>
+                </div>
+            </div>
+
+            <!-- Insert the search icon button FOR BIG DEVICES  -->
+            <button class="btn d-none d-lg-inline" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseSearchBox">
+                <span class="bi bi-search fs-3"></span>
+            </button>
+
+        </div>
+    </nav>
+
+    <main style="min-height: 80vh;">
+        <div class="container-fluid">
+            <div class="row">
+                <!-------------      Buttons    -------------------->
+                <div class="col-12 col-md-3">
+                    <div class="row gap-md-1 justify-content-center">
+                        <button class="btn btn-primary col-6 col-md-10 toggle-btn border border-black border-2"
+                            type="button" data-bs-toggle="collapse" data-bs-target="#Demo1" aria-expanded="false"
+                            aria-controls="Demo1">
+                            Demo 1
+                        </button>
+                        <button class="btn btn-primary col-6 col-md-10 toggle-btn border border-black border-2"
+                            type="button" data-bs-toggle="collapse" data-bs-target="#Demo2" aria-expanded="false"
+                            aria-controls="Demo2">
+                            Demo 2
+                        </button>
+                        <button class="btn btn-primary col-6 col-md-10 toggle-btn border border-black border-2"
+                            type="button" data-bs-toggle="collapse" data-bs-target="#Demo3" aria-expanded="false"
+                            aria-controls="Demo3">
+                            Demo 3
+                        </button>
+                        <button class="btn btn-primary col-6 col-md-10 toggle-btn border border-black border-2"
+                            type="button" data-bs-toggle="collapse" data-bs-target="#Demo4" aria-expanded="false"
+                            aria-controls="Demo4">
+                            Demo 4
+                        </button>
+                    </div>
+                </div>
+                <!--------------------- Demos ----------------------->
+                <div class="row col-12 col-md-9" style="min-height: 80vh;">
+                    <!-- Demo 1 -->
+                    <div class="collapse show" id="Demo1" data-bs-parent=".col-md-9">
+                        <div class="card card-body customizableCard" style="min-height: 80vh;">
+                            <!-- Automatic Slideshow -->
+                            <h4 class="text-center py-3 mb-0" style="background-color: #AFE1AF;">Automatic Slideshow
+                            </h4>
+                            <div id="autoSlideshow" class="carousel slide" data-bs-ride="carousel"
+                                data-bs-interval="3000" data-bs-pause="false">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <h6 class="text-center bg-dark-subtle mb-0 py-1">Sahara Desert</h6>
+                                        <img src="Images/Slideshow1.png" class="d-block w-100 img-fluid" alt="Slide 1">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <h6 class="text-center bg-dark-subtle mb-0 py-1">Mount Everest</h6>
+                                        <img src="Images/Slideshow2.png" class="d-block w-100 img-fluid" alt="Slide 2">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <h6 class="text-center bg-dark-subtle mb-0 py-1">Chocolate Hills</h6>
+                                        <img src="Images/Slideshow3.png" class="d-block w-100 img-fluid" alt="Slide 3">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <h6 class="text-center bg-dark-subtle mb-0 py-1">Niagra Falls</h6>
+                                        <img src="Images/Slideshow4.png" class="d-block w-100 img-fluid" alt="Slide 4">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Manual Slideshow -->
+                            <h4 class="text-center py-3 mt-5 mb-0" style="background-color: #AFE1AF;">Manual Slideshow
+                            </h4>
+                            <div id="slideshow" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#slideshow" data-bs-slide-to="0"
+                                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                                    <button type="button" data-bs-target="#slideshow" data-bs-slide-to="1"
+                                        aria-label="Slide 2"></button>
+                                    <button type="button" data-bs-target="#slideshow" data-bs-slide-to="2"
+                                        aria-label="Slide 3"></button>
+                                    <button type="button" data-bs-target="#slideshow" data-bs-slide-to="3"
+                                        aria-label="Slide 4"></button>
+                                </div>
+
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <h6 class="text-center bg-dark-subtle mb-0 py-1">Sahara Desert</h6>
+                                        <img src="Images/Slideshow1.png" class="d-block w-100" alt="Slide 1">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <h6 class="text-center bg-dark-subtle mb-0 py-1">Mount Everest</h6>
+                                        <img src="Images/Slideshow2.png" class="d-block w-100" alt="Slide 2">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <h6 class="text-center bg-dark-subtle mb-0 py-1">Chocolate Hills</h6>
+                                        <img src="Images/Slideshow3.png" class="d-block w-100" alt="Slide 3">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <h6 class="text-center bg-dark-subtle mb-0 py-1">Niagra Falls</h6>
+                                        <img src="Images/Slideshow4.png" class="d-block w-100" alt="Slide 4">
+                                    </div>
+                                </div>
+
+                                <button class="carousel-control-prev" type="button" data-bs-target="#slideshow"
+                                    data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#slideshow"
+                                    data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Demo 2 -->
+                    <div class="collapse" id="Demo2" data-bs-parent=".col-md-9">
+                        <div class="card card-body customizableCard" style="min-height: 80vh;">
+                            <h4 id="sectionHeader" class="text-center">Customize this Section</h4>
+                            <div class="row">
+                                <!-- Background Color Dropdown -->
+                                <div class="col-md-4">
+                                    <label for="bgColorSelect" class="form-label">Background Color of Sections</label>
+                                    <select id="bgColorSelect" class="form-select">
+                                        <option value="#f8f9fa">Default</option>
+                                        <option value="#FFDDC1">Peach</option>
+                                        <option value="#C1FFD7">Mint</option>
+                                        <option value="#C1D4FF">Sky Blue</option>
+                                    </select>
+                                </div>
+
+                                <!-- Navbar and Footer Color Dropdown -->
+                                <div class="col-md-4">
+                                    <label for="navbarColorSelect" class="form-label">Navbar & Footer Color</label>
+                                    <select id="navbarColorSelect" class="form-select">
+                                        <option value="default">Default</option>
+                                        <option value="#FF7F7F">Red</option>
+                                        <option value="#7FFF7F">Green</option>
+                                        <option value="#7F7FFF">Blue</option>
+                                    </select>
+                                </div>
+
+                                <!-- Image Size Dropdown -->
+                                <div class="col-md-4">
+                                    <label for="imageSizeSelect" class="form-label">Image Size</label>
+                                    <select id="imageSelectionDropdown" class="form-select">
+                                        <option value="Images/Slideshow1.png">Sahara Desert</option>
+                                        <option value="Images/Slideshow2.png">Mount Everest</option>
+                                        <option value="Images/Slideshow3.png">Chocolate Hills</option>
+                                        <option value="Images/Slideshow4.png">Niagara Falls</option>
+                                    </select>
+                                </div>
+
+                                <!-- Font Size Dropdown -->
+                                <div class="col-md-4 mt-3">
+                                    <label for="fontSizeSelect" class="form-label">Font Size (Header)</label>
+                                    <select id="fontSizeSelect" class="form-select">
+                                        <option value="1.5rem">Default</option>
+                                        <option value="2rem">Large</option>
+                                        <option value="1.25rem">Medium</option>
+                                        <option value="1rem">Small</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Image Display -->
+                            <div class="text-center my-3">
+                                <img id="demo2Image" src="Images/Slideshow1.png" class="img-fluid mt-3 w-75"
+                                    alt="Selected Image">
+                            </div>
+                        </div>
+                    </div>
+                    <script>
+                        $(document).ready(function () {
+                            // Change card background color
+                            $('#bgColorSelect').on('change', function () {
+                                $('.customizableCard').css('background-color', $(this).val());
+                            });
+
+                            // Change navbar and footer color
+                            $('#navbarColorSelect').on('change', function () {
+                                let selectedColor = $(this).val();
+                                if (selectedColor === "default") {
+                                    $('.navchangecolour').css('background-color', '#9cd484'); // Default color
+                                    $('#footer').css('background-image', 'linear-gradient(to top, #9cd484, #daf7a6)')
+                                } else {
+                                    $('#footer').css('background-image', 'none')
+                                    $('.navchangecolour, #footer').css('background-color', selectedColor);
+                                }
+                            });
+
+                            // Listen for image selection changes
+                            $('#imageSelectionDropdown').on('change', function () {
+                                var selectedImage = $(this).val();
+                                $('#demo2Image').attr('src', selectedImage); // Change the image source
+                            });
+
+                            // Change font size of the header
+                            $('#fontSizeSelect').on('change', function () {
+                                $('#sectionHeader').css('font-size', $(this).val());
+                            });
+                        });
+                    </script>
+
+
+
+                    <!-- Demo 3 -->
+                    <div class="collapse" id="Demo3" data-bs-parent=".col-md-9">
+                        <div class="card card-body customizableCard" style="min-height: 80vh;">
+                            <h2 class="text-center">Rate the Movie</h2>
+                            <div class="row mb-5 justify-content-center">
+                                <div class="col-8 text-center">
+                                    <!-- Image Section -->
+                                    <img src="Images/PussInBoots.jpg" class="img-fluid mb-3" alt="Slide 3"
+                                        style="max-width: 350px;">
+
+                                    <!-- Vote Section -->
+                                    <div class="d-flex justify-content-center align-items-center gap-3">
+                                        <!-- Upvote Button -->
+                                        <button id="likeBtn" class="btn btn-outline-success d-flex align-items-center btn">
+                                            <i class="bi bi-hand-thumbs-up fs-2"></i>
+                                            <span id="likeCount" class="ms-2 fs-4">20</span>
+                                        </button>
+
+                                        <!-- Downvote Button -->
+                                        <button id="dislikeBtn"
+                                            class="btn btn-outline-danger d-flex align-items-center">
+                                            <i class="bi bi-hand-thumbs-down fs-2"></i>
+                                            <span id="dislikeCount" class="ms-2 fs-4">6</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Script for Voting -->
+                            <script>
+                                let currentVotes = { like: 20, dislike: 6 };
+                                let userVote = null; // Track user vote state
+
+                                function updateCounts() {
+                                    $('#likeCount').text(currentVotes.like);
+                                    $('#dislikeCount').text(currentVotes.dislike);
+                                }
+
+                                function updateButtonStates() {
+                                    if (userVote === 'like') {
+                                        $('#likeBtn').removeClass('btn-outline-success').addClass('btn-success');
+                                        $('#dislikeBtn').removeClass('btn-danger').addClass('btn-outline-danger');
+                                    } else if (userVote === 'dislike') {
+                                        $('#dislikeBtn').removeClass('btn-outline-danger').addClass('btn-danger');
+                                        $('#likeBtn').removeClass('btn-success').addClass('btn-outline-success');
+                                    } else {
+                                        $('#likeBtn').removeClass('btn-success').addClass('btn-outline-success');
+                                        $('#dislikeBtn').removeClass('btn-danger').addClass('btn-outline-danger');
+                                    }
+                                }
+
+                                $('#likeBtn').click(function () {
+                                    if (userVote === 'like') {
+                                        currentVotes.like--;
+                                        userVote = null;
+                                    } else if (userVote === 'dislike') {
+                                        currentVotes.dislike--;
+                                        currentVotes.like++;
+                                        userVote = 'like';
+                                    } else {
+                                        currentVotes.like++;
+                                        userVote = 'like';
+                                    }
+                                    updateCounts();
+                                    updateButtonStates();
+                                });
+
+                                $('#dislikeBtn').click(function () {
+                                    if (userVote === 'dislike') {
+                                        currentVotes.dislike--;
+                                        userVote = null;
+                                    } else if (userVote === 'like') {
+                                        currentVotes.like--;
+                                        currentVotes.dislike++;
+                                        userVote = 'dislike';
+                                    } else {
+                                        currentVotes.dislike++;
+                                        userVote = 'dislike';
+                                    }
+                                    updateCounts();
+                                    updateButtonStates();
+                                });
+                            </script>
+                        </div>
+                    </div>
+
+
+                    <!-- Demo 4 -->
+                    <div class="collapse" id="Demo4" data-bs-parent=".col-md-9">
+                        <div class="card card-body customizableCard" style="min-height: 80vh;">
+                            <div class="container mt-3">
+                                <h2 class="text-center">To-Do List</h2>
+
+                                <!-- Input to add new task -->
+                                <div class="input-group mb-3">
+                                    <input type="text" id="newTaskInput" class="form-control"
+                                        placeholder="Enter a new task">
+                                    <button class="btn btn-primary" id="addTaskBtn">Add Task</button>
+                                </div>
+
+                                <!-- Task list -->
+                                <div id="taskList" class="mt-4"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <script>
+                        $(document).ready(function () {
+                            let taskList = [];
+
+                            // Function to render tasks
+                            function renderTasks() {
+                                $('#taskList').empty();
+                                taskList.forEach((task, index) => {
+                                    const taskBlock = `
+                                        <div class="task-block" data-index="${index}">
+                                            <span class="task-text">${task}</span>
+                                            <span class="remove-task">X</span>
+                                        </div>
+                                    `;
+                                    $('#taskList').append(taskBlock);
+                                });
+                            }
+
+                            // Add new task
+                            $('#addTaskBtn').click(function () {
+                                const newTask = $('#newTaskInput').val().trim();
+                                if (newTask) {
+                                    taskList.push(newTask);
+                                    renderTasks();
+                                    $('#newTaskInput').val('');
+                                }
+                            });
+
+                            // Remove task
+                            $(document).on('click', '.remove-task', function (e) {
+                                e.stopPropagation(); // Prevent triggering edit when clicking remove
+                                const index = $(this).closest('.task-block').data('index');
+                                taskList.splice(index, 1);
+                                renderTasks();
+                            });
+
+                            // Edit task
+                            $(document).on('click', '.task-block', function () {
+                                const index = $(this).data('index');
+                                const updatedTask = prompt('Edit your task:', taskList[index]);
+                                if (updatedTask) {
+                                    taskList[index] = updatedTask.trim();
+                                    renderTasks();
+                                }
+                            });
+                        });
+                    </script>
+                </div>
+            </div>
+        </div>
+
+        <script>
+
+            $(document).ready(function () {
+                // Function to update button styles based on visibility of associated div
+                function updateButtonStyles() {
+                    $('.toggle-btn').each(function () {
+                        var target = $(this).data('bs-target'); // Get the target of the button
+                        if ($(target).hasClass('show')) {
+                            $(this).removeClass('btn-primary').addClass('btn-warning'); // If target div is shown, turn button orange
+                        } else {
+                            $(this).removeClass('btn-warning').addClass('btn-primary'); // If target div is hidden, turn button back to blue
+                        }
+                    });
+                }
+
+                // Update button styles on page load
+                updateButtonStyles();
+
+                // Listen for shown and hidden collapse events to update button styles
+                $('.collapse').on('shown.bs.collapse hidden.bs.collapse', function () {
+                    updateButtonStyles(); // Update styles when collapse transition ends
+                });
+
+                // Ensure button styles are updated when a toggle button is clicked
+                $('.toggle-btn').on('click', function () {
+                    setTimeout(updateButtonStyles, 350); // Add delay to wait for collapse animation to complete
+                });
+            });
+        </script>
+
+
+
+    </main>
+
+    <footer style="min-height: 10vh; background-image: var(--navbar-gradient);" id="footer">
+        <div class="container">
+            <div class="row d-flex justify-content-between align-items-center">
+                <div class="col-12 col-md-auto text-center mb-2 mb-md-0">
+                    <!-- Insert Social media icons -->
+                    <a href="http://www.linkedin.com" style="color: blue;"><span class="bi bi-linkedin fs-1"></span></a>
+                    <a href="http://www.youtube.com" style="color: red;"><span class="bi bi-youtube fs-1"></span></a>
+                    <a href="http://www.x.com" style="color: blue;"><span class="bi bi-twitter fs-1"></span></a>
+                    <a href="http://www.facebook.com" style="color: blue;"><span class="bi bi-facebook fs-1"></span></a>
+                    <a href="http://www.instagram.com" style="color: rgb(220, 64, 90);"><span
+                            class="bi bi-instagram fs-1"></span></a>
+                </div>
+                <div class="col-12 col-md d-flex justify-content-between align-items-center mb-2 mb-md-0">
+                    <span class="text-center mx-auto">
+                        <span class="bi bi-copyright"></span>@2024 DYLAN ANDERSON
+                    </span>
+                    <a href="privacy.html" class="ms-auto" style="text-decoration: none;">PRIVACY POLICY</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!--Insert Bootstrap Javascript and JQuery-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

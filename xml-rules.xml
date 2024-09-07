@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <?xml-stylesheet type="text/css" href="xmlstyles2.css"?> -->
+<xml-rules>
+    <rule>
+        <heading>Rule 1: XML Documents must have a Root Element</heading>
+        <description>XML documents must contain one root element that is the parent of all other
+            elements.</description>
+        <example>&lt;root&gt;
+            &lt;element&gt;Content&lt;/element&gt;
+            &lt;/root&gt;</example>
+    </rule>
+
+    <rule>
+        <heading>Rule 2: The XML Prolog</heading>
+        <description>The XML prolog is optional. If it exists, it must come first in the document.</description>
+        <example>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+            &lt;root&gt;
+            &lt;element&gt;Content&lt;/element&gt;
+            &lt;/root&gt;</example>
+    </rule>
+
+    <rule>
+        <heading>Rule 3: All XML Elements Must Have a Closing Tag</heading>
+        <description>In XML, it is illegal to omit the closing tag. All elements must have a closing
+            tag.</description>
+        <example>&lt;element&gt;This is properly closed&lt;/element&gt;</example>
+    </rule>
+
+    <rule>
+        <heading>Rule 4: XML Tags are Case Sensitive</heading>
+        <description>Opening and closing tags must be written with the same case.</description>
+        <example>&lt;MyElement&gt;Content&lt;/MyElement&gt;
+            &lt;myElement&gt;Content&lt;/myElement&gt; <!-- Incorrect, case mismatch --></example>
+    </rule>
+
+    <rule>
+        <heading>Rule 5: XML Elements Must be Properly Nested</heading>
+        <description>In XML, all elements must be properly nested within each other.</description>
+        <example>&lt;outer&gt; &lt;inner&gt;Content&lt;/inner&gt; &lt;/outer&gt; &lt;outer&gt;
+            &lt;inner&gt;Content&lt;/outer&gt; <!-- Incorrect nesting --></example>
+    </rule>
+
+    <rule>
+        <heading>Rule 6: XML Attribute Values Must Always be Quoted</heading>
+        <description>XML elements can have attributes in name/value pairs just like in HTML.</description>
+        <example>&lt;element attribute="value"&gt;Content&lt;/element&gt;</example>
+    </rule>
+</xml-rules>
